@@ -15,8 +15,6 @@ spec:
       containers:
         - name: lwfw
           image: quay.io/ibmtechgarage/lightwell:2.12.2
-        imagePullSecrets:
-        - name: quay-pull-secret
           # command: [ "/bin/bash", "-c", "--" ]
           # args: [ "while true; do sleep 30; done;" ]
           ports:
@@ -30,6 +28,8 @@ spec:
             mountPath: /app/config
           - name: lw-data
             mountPath: /files
+        imagePullSecrets:
+        - name: quay-pull-secret
       volumes:
         - name: lw-app-prop
           projected:
