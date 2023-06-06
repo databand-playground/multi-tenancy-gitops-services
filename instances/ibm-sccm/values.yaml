@@ -63,12 +63,12 @@ ibm-sccm:
     #Control center database information
     productEntitilement: "CCD,CCM"
     dbType: "DB2"
-    dbHost: "172.21.28.101"
+    dbHost: "172.21.120.49"
     dbPort: "50000"
     dbUser: "db2inst1"
     dbName: "SCCDB"
     dbLoc: "none"
-    dbInit: "false"
+    dbInit: "true"
     dbPartition: "false"
     dbDrivers: "/app/CC/user_inputs/db2jcc4.jar"
     mssqlGlobal: "false"
@@ -176,12 +176,12 @@ ibm-sccm:
   # liveness and Probeness
   livenessProbe:
     initialDelaySeconds: 1000
-    timeoutSeconds: 450
+    timeoutSeconds: 45
     periodSeconds: 120
 
   readinessProbe:
     initialDelaySeconds: 1000
-    timeoutSeconds: 150
+    timeoutSeconds: 15
     periodSeconds: 120
     
   secret:
