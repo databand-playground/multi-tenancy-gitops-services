@@ -68,7 +68,7 @@ ibm-sccm:
     dbUser: "db2inst1"
     dbName: "SCCDB"
     dbLoc: "none"
-    dbInit: "true"
+    dbInit: "false"
     dbPartition: "false"
     dbDrivers: "/app/CC/user_inputs/db2jcc4.jar"
     mssqlGlobal: "false"
@@ -175,14 +175,14 @@ ibm-sccm:
       value: ""
   # liveness and Probeness
   livenessProbe:
-    initialDelaySeconds: 175
-    timeoutSeconds: 45
-    periodSeconds: 120
+    initialDelaySeconds: 1000
+    timeoutSeconds: 450
+    periodSeconds: 1200
 
   readinessProbe:
-    initialDelaySeconds: 175
-    timeoutSeconds: 15
-    periodSeconds: 120
+    initialDelaySeconds: 1000
+    timeoutSeconds: 150
+    periodSeconds: 1200
     
   secret:
     secretName:  "ibm-sccm-secret"
