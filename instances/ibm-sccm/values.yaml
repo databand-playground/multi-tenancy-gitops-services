@@ -175,13 +175,13 @@ ibm-sccm:
       value: ""
   # liveness and Probeness
   livenessProbe:
-    initialDelaySeconds: 1000
-    timeoutSeconds: 450
+    initialDelaySeconds: 2000
+    timeoutSeconds: 4500
     periodSeconds: 1200
 
   readinessProbe:
-    initialDelaySeconds: 1000
-    timeoutSeconds: 150
+    initialDelaySeconds: 2000
+    timeoutSeconds: 1500
     periodSeconds: 1200
     
   secret:
